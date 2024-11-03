@@ -8,7 +8,7 @@ from .viewer import Viewer
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="BlueSky Queue Monitor")
+    parser = argparse.ArgumentParser(description="Megatron Control GUI")
     parser.add_argument(
         "--zmq-control-addr",
         default=None,
@@ -82,7 +82,7 @@ def main(argv=None):
         SETTINGS.zmq_re_manager_control_addr = zmq_control_addr
         SETTINGS.zmq_re_manager_info_addr = zmq_info_addr
 
-    with gui_qt("BlueSky Queue Monitor"):
+    with gui_qt("Megatron Control GUI"):
         viewer = Viewer()  # noqa: 401
 
 
