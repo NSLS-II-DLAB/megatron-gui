@@ -169,7 +169,7 @@ exclude = [
     "build",
     "dist",
     "megatron_gui/_version.py",
-    "docs/conf.py",
+    "docs/source/conf.py",
 ]
 # Use extend-ignore to add to already ignored checks which are anti-patterns like W503.
 extend-ignore = [
@@ -183,3 +183,28 @@ extend-ignore = [
     "E701",
     "E704",
 ]
+
+
+[tool.black]
+line-length = 115
+target-version = ['py310']
+include = '\.pyi?$'
+force-exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | \.pytest_cache
+    | _build
+    | buck-out
+    | build
+    | dist
+    | docs
+  )/
+  | versioneer.py
+)
+'''
