@@ -83,7 +83,7 @@ def main(argv=None):
         SETTINGS.zmq_re_manager_info_addr = zmq_info_addr
 
     with gui_qt("Megatron Control GUI"):
-        viewer = Viewer()  # noqa: 401
+        viewer = Viewer()  # noqa: F841
 
 
 if __name__ == "__main__":

@@ -1,9 +1,8 @@
 import os
 
-from qtpy.QtWidgets import QAction, QFileDialog
-
 from bluesky_widgets.models.run_engine_client import RunEngineClient
 from bluesky_widgets.qt import Window
+from qtpy.QtWidgets import QAction, QFileDialog
 
 from .settings import SETTINGS
 from .widgets import QtViewer

@@ -2,9 +2,6 @@
 Extendeding and supplementing the widgets import bluesky-widgets
 """
 
-from qtpy.QtCore import Qt
-from qtpy.QtWidgets import QFrame, QHBoxLayout, QSplitter, QTabWidget, QVBoxLayout, QWidget
-
 from bluesky_widgets.qt.run_engine_client import (
     QtReConsoleMonitor,
     QtReEnvironmentControls,
@@ -17,6 +14,8 @@ from bluesky_widgets.qt.run_engine_client import (
     QtReRunningPlan,
     QtReStatusMonitor,
 )
+from qtpy.QtCore import Qt
+from qtpy.QtWidgets import QFrame, QHBoxLayout, QSplitter, QTabWidget, QVBoxLayout, QWidget
 
 
 class QtOrganizeQueueWidgets(QSplitter):
