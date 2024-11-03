@@ -158,3 +158,28 @@ exclude = [
     "docs/source/examples",
     "src/bluesky/_vendor"
 ]
+
+
+[tool.flake8]
+# Check that this is aligned with your other tools like Black
+max-line-length = 115
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    "megatron_gui/_version.py",
+    "docs/conf.py",
+]
+# Use extend-ignore to add to already ignored checks which are anti-patterns like W503.
+extend-ignore = [
+    # PEP 8 recommends to treat : in slices as a binary operator with the lowest priority, and to leave an equal
+    # amount of space on either side, except if a parameter is omitted (e.g. ham[1 + 1 :]).
+    # This behaviour may raise E203 whitespace before ':' warnings in style guide enforcement tools like Flake8.
+    # Since E203 is not PEP 8 compliant, we tell Flake8 to ignore this warning.
+    # https://black.readthedocs.io/en/stable/the_black_code_style/current_style.html#slices
+    "E203",
+    "W503",
+    "E701",
+    "E704",
+]
