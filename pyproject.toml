@@ -89,7 +89,7 @@ write_to = "src/megatron_gui/_version.py"
 
 [tool.uv]
 dev-dependencies = [
-  "megatron_gui[test]",
+  "megatron_gui[dev]",
 ]
 
 
@@ -198,3 +198,10 @@ force-exclude = '''
   | versioneer.py
 )
 '''
+
+
+[tool.isort]
+line_length = 115
+multi_line_output = 3
+include_trailing_comma = true
+profile = "black"
