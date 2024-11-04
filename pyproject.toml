@@ -52,6 +52,7 @@ dev = [
     "lmfit",
     "mypy",
     "myst-parser",
+    "nox",
     "numpydoc",
     "ophyd",
     "packaging",
@@ -69,16 +70,6 @@ dev = [
     "sphinx-copybutton",
     "sphinx-design",
     "sphinx_rtd_theme",
-    # These suitcases are test deps of databroker which we need to access
-    # databroker fixtures.
-    "suitcase-jsonl",
-    "suitcase-mongo",
-    "suitcase-msgpack",
-    "tifffile",
-    "tox-direct",
-    "types-mock",
-    "tiled[all]",
-    "vendoring",
 ]
 
 
