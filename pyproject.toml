@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "megatron-gui"
 authors = [
-  { name = "My Name", email = "me@email.com" },
+  { name = "Brookhaven National Laboratory", email = "me@email.com" },
 ]
 description = "GUI for Deposition Lab Controls"
 readme = "README.md"
