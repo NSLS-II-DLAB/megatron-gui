@@ -52,7 +52,6 @@ dev = [
     "lmfit",
     "mypy",
     "myst-parser",
-    "nox",
     "numpydoc",
     "ophyd",
     "packaging",
