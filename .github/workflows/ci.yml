@@ -16,7 +16,7 @@ env:
 
 jobs:
   pre-commit:
-    name: Format
+    name: Linting
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,10 +30,9 @@ jobs:
       - uses: pre-commit/action@v3.0.1
         with:
           extra_args: --hook-stage manual --all-files
-      - name: Run PyLint
+      - name: Run 'pre-commit'
         run: |
-          echo "::add-matcher::$GITHUB_WORKSPACE/.github/matchers/pylint.json"
-          pipx run nox -s pylint
+          pre-commit run --all-files --verbose
 
   checks:
     name: Check Python ${{ matrix.python-version }} on ${{ matrix.runs-on }}
